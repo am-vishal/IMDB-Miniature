@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta tags -->
+    <meta charset="utf-8" />
+    <title>IMDB Miniature</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="IMDB-Miniature test project for Coding Ninja" />
+    <meta name="keywords" content="HTML, CSS, Vanilla JavaScript and OMDb API" />
+    <meta name="author" content="Vishal Kumar (https://github.com/am-vishal)" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <!-- fontawesome css -->
+    <script src="https://kit.fontawesome.com/a8162db7fd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <!-- container-fluid starts the container for the whole page-->
+    <div class="container-fluid">
+      <!-- navbar fixed-top sets the navigation bar to be fixed at the top of the page -->
+      <nav class="navbar fixed-top navbar-light text-white bg-dark" style="height: 73px">
+        <div class="container-fluid justify-content-start">
+          <!-- navbar-brand sets the branding for the website -->
+          <a class="navbar-brand d-flex justify-content-start align-items-center w-100 p-2" href="./index.html">
+            <!-- img tag is used to include the logo of the website -->
+            <img src="./images/imdb_logo.png" alt="IMDB-Miniature" height="24px" />
+            <span class="logo-text text-light d-none d-sm-none d-md-block">&nbsp;Miniature</span>
+          </a>
+          <!-- search-bar div is used to create the search bar -->
+          <div id="search-bar">
+            <form action="" autocomplete="off">
+              <input type="search" placeholder="Search " id="search" autocomplete="off" />
+            </form>
+          </div>
+          <div id="show-favourites"></div>
+          <div>
+            <div id="mySidebar" class="sidebar">
+              <!-- Close button for the sidebar -->
+              <a class="closebtn" onclick="closeNav()">×</a>
+              <section id="favorites-section">
+                <h2>Favorites</h2>
+                <div id="fav-para">
+                  <!-- Message displayed when no items have been added to favorites -->
+                  <p class="fs-5 mx-3 text-muted">"Add items to your favorites by clicking the 🤍 icon."</p>
+                </div>
+                <!-- Container for displaying favorite movies -->
+                <div id="fav-movies-container"></div>
+              </section>
+            </div>
+            <div id="main">
+              <!-- Button to open the sidebar -->
+              <button id="openNav" class="openbtn" onclick="openNav()">☰ Favorites</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div>
+      <main id="main-section">
+        <div class="row w-100">
+          <p id="empty-search-text" class="text-muted h2"></p>
+          <div class="col-sm" id="card-container"></div>
+        </div>
+      </main>
+    </div>
+    <!-- footer section -->
+    <footer class="footer bg-dark pt-3">
+      <div class="row">
+        <ul>
+          <li><i class="fa-brands fa-facebook"></i></li>
+          <li><i class="fa-brands fa-instagram"></i></li>
+          <li><i class="fa-brands fa-youtube"></i></li>
+          <li><i class="fa-brands fa-twitter"></i></li>
+        </ul>
+      </div>
+      <div class="row my-3">
+        <ul>
+          <li>Contact us</li>
+          <li>Our Services</li>
+          <li>Privacy Policy</li>
+          <li>Terms & Conditions</li>
+          <li>Career</li>
+        </ul>
+      </div>
+      <div class="row mt-3">
+        <p>IMDb Miniature ©2023 | Designed By Vishal</p>
+      </div>
+    </footer>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

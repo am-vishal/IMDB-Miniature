@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>IMDB Miniature</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="IMDB-Miniature test project for Coding Ninja" />
+    <meta name="keywords" content="HTML, CSS, Vanilla JavaScript and OMDb API" />
+    <meta name="author" content="Vishal Kumar (https://github.com/am-vishal)" />
+    <link rel="icon" type="image/x-icon" href="./images/movie.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <script src="https://kit.fontawesome.com/a8162db7fd.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-dark bg-dark px-2">
+      <div class="container-fluid row">
+        <a class="navbar-brand col-3 d-flex justify-content-start align-items-center p-2" href="/index.html">
+          <img src="./images/imdb_logo.png" alt="IMDB-Miniature" height="24px" />
+          <span class="logo-text text-light d-none d-sm-none d-md-block">&nbsp;Miniature</span>
+        </a>
+        <p class="col-6 h4 mt-2">Movie Summary</p>
+      </div>
+    </nav>
+
+    <main class="container-fluid justify-content-center my-4">
+      <!-- This container element is used to center the content on the page and add some margin -->
+      <div class="mb-3 mx-auto" style="max-width: 90vw">
+        <!-- This div element is used to add margin to the bottom of the element and center it horizontally -->
+        <div class="row">
+          <div class="col-md-3 d-flex justify-content-center justify-content-start">
+            <!-- This div element creates a column for the movie poster image -->
+            <img id="poster" onerror="this.src='./images/No_Image_Available.jpg'" class="img-fluid rounded-start" style="max-height: 400px" />
+            <!-- The "img" element has an "id" of "poster" and a class of "img-fluid rounded-start" which is used to make the image responsive and round the top corners. -->
+          </div>
+          <div class="col-md-8">
+            <!-- This div element creates a column for the movie information -->
+            <h1 id="title">Movie name</h1>
+            <div class="d-flex justify-content-between align-content-center mx-auto" style="max-width: 70vw">
+              <!-- This div element is used to align the year and runtime horizontally -->
+              <div>
+                <p id="year" class="text-info d-inline-block"></p>
+                <span id="runtime" class="ms-4 text-info">min</span>
+              </div>
+              <!-- This div element is used to align the rating horizontally and translate it vertically -->
+              <div style="transform: translateY(-50px)">
+                <h6 class="mb-0 ms-4 text-warning">Rating</h6>
+                <h5 class="mt-1"><i class="fa-solid fa-star"></i> <span id="rating"></span></h5>
+              </div>
+            </div>
+            <div>
+              <h5 class="">Plot</h5>
+              <p class="" id="plot"></p>
+              <p class="">
+                Directors :
+                <span id="director-names" class=""></span>
+              </p>
+              <p class="info-type">
+                Cast :
+                <span id="cast-names" class=""></span>
+              </p>
+              <p class="info-type">
+                Genre :
+                <span id="genre" class=""></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/movie.js"></script>
+  </body>
+</html>
